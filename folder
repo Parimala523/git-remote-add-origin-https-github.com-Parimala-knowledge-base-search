@@ -1,0 +1,10 @@
+knowledge-base-search/
+├── app.py
+├── documents/
+│   ├── doc1.txt
+│   └── doc2.txt
+├── index/
+├── requirements.txt
+├── templates/
+│   └── index.html
+└── README.md
