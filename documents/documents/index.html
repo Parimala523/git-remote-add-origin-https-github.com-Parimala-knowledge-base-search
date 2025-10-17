@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Knowledge Base Search</title>
+</head>
+<body>
+    <h2>Knowledge Base Search</h2>
+    <form method="post">
+        <input type="text" name="query" placeholder="Enter search term..." required>
+        <button type="submit">Search</button>
+    </form>
+
+    {% if results %}
+        <h3>Results:</h3>
+        <ul>
+            {% for result in results %}
+                <li><strong>{{ result['title'] }}</strong>: {{ result.highlights('content') }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
